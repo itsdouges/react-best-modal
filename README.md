@@ -20,7 +20,7 @@ const App = ({ showModal, closeModal }) => (
     Hi Mom!
     {showModal && (
       <SimpleModal onRequestClose={closeModal} appRoot={appRoot}>
-        Hello, World!
+        <button>Hello, World!</button>
       </SimpleModal>
     )}
   </div>
@@ -28,6 +28,8 @@ const App = ({ showModal, closeModal }) => (
 
 render(<App />, appRoot);
 ```
+
+**NOTE**: It is _required_ that you have an element inside your modal that is focusable. Essentially, any input or button.
 
 ## Styling
 
