@@ -9,10 +9,12 @@ const DisableBodyScroll = styled(BodyClassName)`
   position: relative;
 `;
 
-interface Props {
+interface Props extends React.AllHTMLAttributes<any> {
   children: React.ReactNode;
   onRequestClose: () => void;
   appRoot: Element;
+  // Allow through any properties that weren't picked up
+  [x: string]: any;
 }
 
 const ESC_KEY = 27;
