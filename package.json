@@ -24,9 +24,7 @@
   },
   "peerDependencies": {
     "focus-trap-react": ">=3.x.x",
-    "react": ">=16.x.x",
-    "react-dom": ">=16.x.x",
-    "styled-components": ">=1.x.x"
+    "react": ">=16.x.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

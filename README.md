@@ -1,11 +1,11 @@
 # react-simple-modal
 
-Opinionated tiny API. No styling. Accessible. React 16 only.
+Tiny API. No styling. Accessible. **React 16+ only.**
 
 ## Usage
 
 ```sh
-npm install styled-components focus-trap-react react-simple-modal --save
+npm install focus-trap-react react-simple-modal --save
 ```
 
 ```javascript
@@ -33,7 +33,7 @@ render(<App />, appRoot);
 
 ## Styling
 
-It's up to you to style and position your modal. `react-simple-modal` will only set a `className` on the body to disable scrolling when mounted.
+It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-simple-modal/?selectedKind=SimpleModal&selectedStory=disable%20body%20scroll&)
 
 ### Transitions
 

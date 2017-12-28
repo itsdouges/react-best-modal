@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
-import styled from 'styled-components';
 import FocusTrap from 'focus-trap-react';
-import BodyClassName from './BodyClassName';
-
-const DisableBodyScroll = styled(BodyClassName)`
-  overflow: hidden;
-  position: relative;
-`;
 
 interface Props extends React.AllHTMLAttributes<any> {
   children: React.ReactNode;
@@ -50,7 +43,6 @@ export default class ModeAll extends React.Component<Props> {
     return createPortal(
       <FocusTrap aria-modal="true" role="dialog" {...props}>
         {this.props.children}
-        <DisableBodyScroll />
       </FocusTrap>,
       document.body
     );

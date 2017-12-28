@@ -3,6 +3,12 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import SimpleModal from '../src';
 import Toggler from './Toggler';
+import BodyClassName from './BodyClassName';
+
+const DisableBodyScroll = styled(BodyClassName)`
+  overflow: hidden;
+  position: relative;
+`;
 
 const FixedContainer = styled.div`
   position: fixed;
@@ -33,7 +39,7 @@ const App = styled.div`
   justify-content: center;
 `;
 
-storiesOf('SimpleModal', module).add('long content', () => (
+storiesOf('SimpleModal', module).add('disable body scroll', () => (
   <App>
     <Toggler>
       {({ show, toggle }) =>
@@ -44,6 +50,8 @@ storiesOf('SimpleModal', module).add('long content', () => (
             aria-labelledby="modal-title"
             aria-describedby="modal-description"
           >
+            <DisableBodyScroll />
+
             <FixedContainer>
               <InnerContent>
                 <button onClick={toggle}>close modal</button>
