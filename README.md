@@ -1,6 +1,6 @@
 # react-best-modal
 
-Tiny API. No styling. Accessible. **React 16+ only.**
+Accessible. Tiny API. No styling. **React 16+ only.**
 
 ## Usage
 

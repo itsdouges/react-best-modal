@@ -1,7 +1,7 @@
 {
   "name": "react-best-modal",
   "version": "0.1.0",
-  "description": "Simple modal that is accessible out of the box, but requires you to style it.",
+  "description": "Accessible. Tiny API. No styling.",
   "main": "dist/index.js",
   "module": "dist/esnext/index.tsx",
   "devDependencies": {
