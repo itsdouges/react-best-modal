@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-import SimpleModal from '../src';
+import BestModal from '../src';
 import Toggler from './Toggler';
 
 type TransitionState = 'entering' | 'entered' | 'exiting' | 'exited';
@@ -33,19 +33,19 @@ const ContainerWithTransition = styled.div`
   opacity: ${(props: TransitionProps) => opacityMap[props.state] || 0};
 `;
 
-storiesOf('SimpleModal', module).add('transition', () => (
+storiesOf('BestModal', module).add('transition', () => (
   <Toggler>
     {({ show, toggle }) => (
-      <Transition in={show} timeout={50} mountOnEnter unmountOnExit>
+      <Transition in={show} timeout={180} mountOnEnter unmountOnExit>
         {(state: TransitionState) => (
-          <SimpleModal
+          <BestModal
             onRequestClose={toggle}
             appRoot={document.querySelector('#root') || document.body}
           >
             <ContainerWithTransition state={state}>
               <button onClick={toggle}>close</button>
             </ContainerWithTransition>
-          </SimpleModal>
+          </BestModal>
         )}
       </Transition>
     )}

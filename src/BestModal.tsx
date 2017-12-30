@@ -12,7 +12,7 @@ export interface Props extends React.AllHTMLAttributes<any> {
 
 const ESC_KEY = 27;
 
-export default class SimpleModal extends React.Component<Props> {
+export default class BestModal extends React.Component<Props> {
   previousFocusedElement: HTMLElement;
 
   componentDidMount() {

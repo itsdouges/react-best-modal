@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import SimpleModal from '../src';
+import BestModal from '../src';
 import Toggler from './Toggler';
 
 const FixedContainer = styled.div`
@@ -17,18 +17,15 @@ const FixedContainer = styled.div`
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
 `;
 
-storiesOf('SimpleModal', module).add('fixed', () => (
+storiesOf('BestModal', module).add('fixed', () => (
   <Toggler>
     {({ show, toggle }) =>
       show && (
-        <SimpleModal
-          appRoot={document.getElementById('root') as HTMLElement}
-          onRequestClose={toggle}
-        >
+        <BestModal appRoot={document.getElementById('root') as HTMLElement} onRequestClose={toggle}>
           <FixedContainer>
             <button onClick={toggle}>close modal</button>
           </FixedContainer>
-        </SimpleModal>
+        </BestModal>
       )
     }
   </Toggler>

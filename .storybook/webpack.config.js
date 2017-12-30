@@ -11,6 +11,9 @@ module.exports = {
         test: /\.tsx$/,
         loader: 'ts-loader',
         include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../stories')],
+        options: {
+          configFile: 'tsconfig.test.json',
+        },
       },
     ],
   },

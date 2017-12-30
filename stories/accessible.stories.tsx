@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import SimpleModal from '../src';
+import BestModal from '../src';
 import Toggler from './Toggler';
 
 const FixedContainer = styled.div`
@@ -16,11 +16,11 @@ const FixedContainer = styled.div`
   justify-content: center;
 `;
 
-storiesOf('SimpleModal', module).add('more accessible', () => (
+storiesOf('BestModal', module).add('more accessible', () => (
   <Toggler>
     {({ show, toggle }) =>
       show && (
-        <SimpleModal
+        <BestModal
           appRoot={document.getElementById('root') as HTMLElement}
           onRequestClose={toggle}
           aria-labelledby="modal-title"
@@ -33,7 +33,7 @@ storiesOf('SimpleModal', module).add('more accessible', () => (
               <p id="modal-description">This is a modal, hello worlding!</p>
             </div>
           </FixedContainer>
-        </SimpleModal>
+        </BestModal>
       )
     }
   </Toggler>

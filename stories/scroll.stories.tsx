@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import SimpleModal from '../src';
+import BestModal from '../src';
 import Toggler from './Toggler';
 import BodyClassName from './BodyClassName';
 
@@ -39,12 +39,12 @@ const App = styled.div`
   justify-content: center;
 `;
 
-storiesOf('SimpleModal', module).add('disable body scroll', () => (
+storiesOf('BestModal', module).add('disable body scroll', () => (
   <App>
     <Toggler>
       {({ show, toggle }) =>
         show && (
-          <SimpleModal
+          <BestModal
             appRoot={document.getElementById('root') as HTMLElement}
             onRequestClose={toggle}
             aria-labelledby="modal-title"
@@ -58,7 +58,7 @@ storiesOf('SimpleModal', module).add('disable body scroll', () => (
                 scroll down
               </InnerContent>
             </FixedContainer>
-          </SimpleModal>
+          </BestModal>
         )
       }
     </Toggler>

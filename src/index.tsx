@@ -1,3 +1,3 @@
-import SimpleModal from './SimpleModal';
+import BestModal from './BestModal';
 
-export default SimpleModal;
+export default BestModal;

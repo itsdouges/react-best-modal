@@ -1,5 +1,8 @@
 # react-best-modal
 
+[![NPM version](http://img.shields.io/npm/v/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
+[![NPM downloads](http://img.shields.io/npm/dm/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
+
 Accessible. Tiny API. No styling. **React 16+ only.**
 
 ## Usage
@@ -10,7 +13,7 @@ npm install focus-trap-react react-best-modal --save
 
 ```javascript
 import React from 'react';
-import SimpleModal from 'react-best-modal';
+import BestModal from 'react-best-modal';
 import { render } from 'react-dom';
 
 const appRoot = document.getElementById('root');
@@ -19,9 +22,9 @@ const App = ({ showModal, closeModal }) => (
   <div>
     Hi Mom!
     {showModal && (
-      <SimpleModal onRequestClose={closeModal} appRoot={appRoot}>
+      <BestModal onRequestClose={closeModal} appRoot={appRoot}>
         <button>Hello, World!</button>
-      </SimpleModal>
+      </BestModal>
     )}
   </div>
 );
@@ -33,7 +36,7 @@ render(<App />, appRoot);
 
 ## Styling
 
-It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-best-modal/?selectedKind=SimpleModal&selectedStory=disable%20body%20scroll&)
+It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-best-modal/?selectedKind=BestModal&selectedStory=disable%20body%20scroll&)
 
 ### Transitions
 
@@ -44,7 +47,7 @@ It's up to you to style and position your modal. Want to disable scrolling conte
 If you're driving home for the ultimate accessible modal, make sure to use `aria-labelledby` and `aria-describedby`, for title and description of the modal, like so:
 
 ```javascript
-<SimpleModal
+<BestModal
   onRequestClose={closeModal}
   appRoot={appRoot}
   aria-labelledby="modal-title"
@@ -52,7 +55,7 @@ If you're driving home for the ultimate accessible modal, make sure to use `aria
 >
   <h2 id="modal-title">Hello, World!</h2>
   <p id="modal-description">This is a modal, hello worlding!</p>
-</SimpleModal>
+</BestModal>
 ```
 
 ## Focus
@@ -66,10 +69,10 @@ This isn't supported. It's also bad practice to show many modals at a time.
 
 ## API
 
-### `SimpleModal`
+### `BestModal`
 
 ```javascript
-import SimpleModal from 'react-best-modal';
+import BestModal from 'react-best-modal';
 ```
 
 #### Props
