@@ -11,20 +11,22 @@
     "@storybook/react": "^3.3.2",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
+    "@types/react-transition-group": "^2.0.6",
     "@types/storybook__react": "^3.0.5",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
-    "focus-trap-react": "^3.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-focus-lock": "^1.6.1",
+    "react-transition-group": "^2.2.1",
     "styled-components": "^2.4.0",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2"
   },
   "peerDependencies": {
-    "focus-trap-react": ">=3.x.x",
-    "react": ">=16.x.x"
+    "react": ">=16.x.x",
+    "react-focus-lock": ">=1.x.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,7 +37,14 @@
     "type": "git",
     "url": "git+https://github.com/madou/react-simple-modal.git"
   },
-  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "modal-dialog",
+    "simple",
+    "lightweight"
+  ],
   "author": "madou",
   "license": "MIT",
   "bugs": {

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createPortal } from 'react-dom';
-import FocusTrap from 'focus-trap-react';
+import FocusLock from 'react-focus-lock';
 
 interface Props extends React.AllHTMLAttributes<any> {
   children: React.ReactNode;
-  onRequestClose: () => void;
+  onRequestClose: (e: KeyboardEvent) => void;
   appRoot: Element;
   // Allow through any properties that weren't picked up
   [x: string]: any;
@@ -29,11 +29,7 @@ export default class ModeAll extends React.Component<Props> {
 
   onKeyDown = (e: KeyboardEvent) => {
     if (e.keyCode === ESC_KEY) {
-      if (e.defaultPrevented) {
-        return;
-      }
-      e.stopPropagation();
-      this.props.onRequestClose();
+      this.props.onRequestClose(e);
     }
   };
 
@@ -41,9 +37,11 @@ export default class ModeAll extends React.Component<Props> {
     const { children, onRequestClose, appRoot, ...props } = this.props;
 
     return createPortal(
-      <FocusTrap aria-modal="true" role="dialog" {...props}>
-        {this.props.children}
-      </FocusTrap>,
+      <FocusLock>
+        <div aria-modal="true" role="dialog" {...props}>
+          {this.props.children}
+        </div>
+      </FocusLock>,
       document.body
     );
   }
