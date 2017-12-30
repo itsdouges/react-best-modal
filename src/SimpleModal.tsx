@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createPortal } from 'react-dom';
 import FocusLock from 'react-focus-lock';
 
-interface Props extends React.AllHTMLAttributes<any> {
+export interface Props extends React.AllHTMLAttributes<any> {
   children: React.ReactNode;
   onRequestClose: (e: KeyboardEvent) => void;
   appRoot: Element;
@@ -12,7 +12,7 @@ interface Props extends React.AllHTMLAttributes<any> {
 
 const ESC_KEY = 27;
 
-export default class ModeAll extends React.Component<Props> {
+export default class SimpleModal extends React.Component<Props> {
   previousFocusedElement: HTMLElement;
 
   componentDidMount() {

@@ -1,16 +1,16 @@
-# react-simple-modal
+# react-best-modal
 
 Tiny API. No styling. Accessible. **React 16+ only.**
 
 ## Usage
 
 ```sh
-npm install focus-trap-react react-simple-modal --save
+npm install focus-trap-react react-best-modal --save
 ```
 
 ```javascript
 import React from 'react';
-import SimpleModal from 'react-simple-modal';
+import SimpleModal from 'react-best-modal';
 import { render } from 'react-dom';
 
 const appRoot = document.getElementById('root');
@@ -33,11 +33,11 @@ render(<App />, appRoot);
 
 ## Styling
 
-It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-simple-modal/?selectedKind=SimpleModal&selectedStory=disable%20body%20scroll&)
+It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-best-modal/?selectedKind=SimpleModal&selectedStory=disable%20body%20scroll&)
 
 ### Transitions
 
-`react-simple-modal` works perfectly with [`ReactTransitionGroup`](https://reactcommunity.org/react-transition-group/).
+`react-best-modal` works perfectly with [`ReactTransitionGroup`](https://reactcommunity.org/react-transition-group/).
 
 ## Even. More. Accessible.
 
@@ -69,15 +69,15 @@ This isn't supported. It's also bad practice to show many modals at a time.
 ### `SimpleModal`
 
 ```javascript
-import SimpleModal from 'react-simple-modal';
+import SimpleModal from 'react-best-modal';
 ```
 
 #### Props
 
-| prop           | type        | required | description                                                                                     |
-| -------------- | ----------- | -------- | ----------------------------------------------------------------------------------------------- |
-| children       | ReactNode   | yes      | Your modal markup.                                                                              |
-| onRequestClose | Function    | yes      | Callback when the modal wants to close. Up to you to action it.                                 |
-| appRoot        | HTMLElement | yes      | Root of your application. The modal will add and remove accessible attributes when appropriate. |
+| prop           | type                       | required | description                                                                                     |
+| -------------- | -------------------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| children       | ReactNode                  | yes      | Your modal markup.                                                                              |
+| onRequestClose | (e: KeyboardEvent) => void | yes      | Callback when the modal wants to close. Up to you to action it.                                 |
+| appRoot        | HTMLElement                | yes      | Root of your application. The modal will add and remove accessible attributes when appropriate. |
 
 All other props that are valid on a `HTMLElement` are passed through.

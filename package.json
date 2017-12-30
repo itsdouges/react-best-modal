@@ -1,9 +1,9 @@
 {
-  "name": "react-simple-modal",
+  "name": "react-best-modal",
   "version": "0.1.0",
   "description": "Simple modal that is accessible out of the box, but requires you to style it.",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/esnext/index.tsx",
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.2",
     "@storybook/addon-links": "^3.3.2",
@@ -31,24 +31,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs"
+    "build-storybook": "build-storybook -o docs",
+    "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madou/react-simple-modal.git"
+    "url": "git+https://github.com/madou/react-best-modal.git"
   },
-  "keywords": [
-    "react",
-    "modal",
-    "dialog",
-    "modal-dialog",
-    "simple",
-    "lightweight"
-  ],
+  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
   "author": "madou",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madou/react-simple-modal/issues"
+    "url": "https://github.com/madou/react-best-modal/issues"
   },
-  "homepage": "https://github.com/madou/react-simple-modal#readme"
+  "homepage": "https://github.com/madou/react-best-modal#readme"
 }

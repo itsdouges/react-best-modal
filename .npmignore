@@ -1,0 +1,9 @@
+stories
+.storybook
+docs
+.gitignore
+.prettierrc
+tsconfig.json
+tsconfig.next.json
+yarn.lock
+src
