@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
 [![NPM downloads](http://img.shields.io/npm/dm/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
 
-Accessible. Tiny API. No styling. **React 16+ only.**
+Simple is best. Accessible out of the box, tiny api, bring your own styles. **React 16+ only.**
 
 ## Usage
 
