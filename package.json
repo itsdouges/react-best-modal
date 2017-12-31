@@ -7,23 +7,19 @@
   "author": "madou",
   "license": "MIT",
   "homepage": "https://github.com/madou/react-best-modal#readme",
-  "keywords": [
-    "react",
-    "modal",
-    "dialog",
-    "modal-dialog",
-    "simple",
-    "lightweight"
-  ],
+  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
   "scripts": {
-    "test": "jest --env=jsdom",
+    "tdd": "jest --watch",
+    "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
     "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json",
     "prepublish": "yarn build",
     "preversion": "yarn test",
-    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags"
+    "version":
+      "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "peerDependencies": {
     "react": ">=16.x.x",
@@ -46,10 +42,12 @@
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "changelog-verify": "^1.1.0",
+    "codecov": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
     "jest": "^22.0.4",
+    "nyc": "^11.4.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -75,14 +73,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "__tests__/.*\\.test\\.tsx$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "setupTestFrameworkScriptFile": "<rootDir>test/setup.js",
     "globals": {
       "ts-jest": {
