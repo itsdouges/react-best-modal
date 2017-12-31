@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BestModal /> should pass through all extra props 1`] = `
+<Portal>
+  <FocusLock
+    allowTextSelection={false}
+    disabled={false}
+    noFocusGuards={false}
+    returnFocus={false}
+    sandboxed={false}
+  >
+    <div
+      aria-describedby="my-p"
+      aria-labelledby="my-h1"
+      aria-modal="true"
+      className="my-modal"
+      role="dialog"
+    >
+      hi
+    </div>
+  </FocusLock>
+</Portal>
+`;

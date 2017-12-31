@@ -7,16 +7,22 @@
   "author": "madou",
   "license": "MIT",
   "homepage": "https://github.com/madou/react-best-modal#readme",
-  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "modal-dialog",
+    "simple",
+    "lightweight"
+  ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
     "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json",
     "prepublish": "yarn build",
     "preversion": "yarn test",
-    "version":
-      "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
@@ -29,21 +35,28 @@
     "@storybook/addon-links": "^3.3.2",
     "@storybook/addons": "^3.3.2",
     "@storybook/react": "^3.3.2",
+    "@types/enzyme": "^3.1.6",
     "@types/jest": "^22.0.0",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
     "@types/react-transition-group": "^2.0.6",
+    "@types/sinon": "^4.1.2",
     "@types/storybook__addon-info": "^3.2.1",
     "@types/storybook__react": "^3.0.5",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "changelog-verify": "^1.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
     "jest": "^22.0.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-focus-lock": "^1.6.1",
+    "react-test-renderer": "^16.2.0",
     "react-transition-group": "^2.2.1",
+    "sinon": "^4.1.3",
     "styled-components": "^2.4.0",
     "ts-jest": "^22.0.0",
     "ts-loader": "^3.2.0",
@@ -62,7 +75,15 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "__tests__/.*\\.test\\.tsx$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>test/setup.js",
     "globals": {
       "ts-jest": {
         "tsConfigFile": "tsconfig.test.json",

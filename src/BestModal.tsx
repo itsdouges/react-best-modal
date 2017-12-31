@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createPortal } from 'react-dom';
+import Portal from './Portal';
 import FocusLock from 'react-focus-lock';
 
 export interface Props extends React.AllHTMLAttributes<any> {
@@ -36,13 +36,14 @@ export default class BestModal extends React.Component<Props> {
   render() {
     const { children, onRequestClose, appRoot, ...props } = this.props;
 
-    return createPortal(
-      <FocusLock>
-        <div aria-modal="true" role="dialog" {...props}>
-          {this.props.children}
-        </div>
-      </FocusLock>,
-      document.body
+    return (
+      <Portal>
+        <FocusLock>
+          <div aria-modal="true" role="dialog" {...props}>
+            {this.props.children}
+          </div>
+        </FocusLock>
+      </Portal>
     );
   }
 }
