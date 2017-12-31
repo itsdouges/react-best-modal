@@ -2,6 +2,8 @@
 
 [![NPM version](http://img.shields.io/npm/v/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
 [![NPM downloads](http://img.shields.io/npm/dm/react-best-modal.svg?style=flat-square)](https://www.npmjs.com/package/react-best-modal)
+[![Build Status](http://img.shields.io/travis/madou/react-best-modal/master.svg?style=flat-square)](https://travis-ci.org/madou/react-best-modal)
+[![codecov](https://codecov.io/gh/madou/react-best-modal/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/react-best-modal)
 
 Simple is best. Accessible out of the box, tiny api, bring your own styles. **React 16+ only.**
 
