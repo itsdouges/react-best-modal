@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.0.0][] - 2018-01-01
+
 ### Changed
 
 * README to mention correct dependency
@@ -19,3 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [unreleased]: https://github.com/madou/react-simple-modal/compare/v0.1.1...HEAD
 [0.1.1]: https://github.com/madou/react-simple-modal/tree/v0.1.1
+
+
+[Unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/madou/react-simple-modal/tree/v1.0.0
