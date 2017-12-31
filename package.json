@@ -4,12 +4,32 @@
   "description": "Accessible. Tiny API. No styling.",
   "main": "dist/index.js",
   "module": "dist/esnext/index.tsx",
+  "author": "madou",
+  "license": "MIT",
+  "homepage": "https://github.com/madou/react-best-modal#readme",
+  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
+  "scripts": {
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs",
+    "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json",
+    "prepublish": "yarn build",
+    "preversion": "yarn test",
+    "version":
+      "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags"
+  },
+  "peerDependencies": {
+    "react": ">=16.x.x",
+    "react-focus-lock": ">=1.x.x"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.2",
     "@storybook/addon-info": "^3.3.3",
     "@storybook/addon-links": "^3.3.2",
     "@storybook/addons": "^3.3.2",
     "@storybook/react": "^3.3.2",
+    "@types/jest": "^22.0.0",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
     "@types/react-transition-group": "^2.0.6",
@@ -18,46 +38,36 @@
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "changelog-verify": "^1.1.0",
+    "jest": "^22.0.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-focus-lock": "^1.6.1",
     "react-transition-group": "^2.2.1",
     "styled-components": "^2.4.0",
+    "ts-jest": "^22.0.0",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
     "version-changelog": "^2.1.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.x.x",
-    "react-focus-lock": ">=1.x.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
-    "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json",
-    "prepublish": "yarn build",
-    "preversion": "yarn test",
-    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madou/react-best-modal.git"
   },
-  "keywords": [
-    "react",
-    "modal",
-    "dialog",
-    "modal-dialog",
-    "simple",
-    "lightweight"
-  ],
-  "author": "madou",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/madou/react-best-modal/issues"
   },
-  "homepage": "https://github.com/madou/react-best-modal#readme"
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "__tests__/.*\\.test\\.tsx$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json",
+        "skipBabel": true
+      }
+    }
+  }
 }
