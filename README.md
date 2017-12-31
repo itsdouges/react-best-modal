@@ -8,7 +8,7 @@ Simple is best. Accessible out of the box, tiny api, bring your own styles. **Re
 ## Usage
 
 ```sh
-npm install focus-trap-react react-best-modal --save
+npm install react-focus-lock react-best-modal --save
 ```
 
 ```javascript
@@ -60,7 +60,7 @@ If you're driving home for the ultimate accessible modal, make sure to use `aria
 
 ## Focus
 
-* Focus will be trapped inside the modal when mounted. You can't disable this.
+* Focus will be trapped inside the modal when mounted.
 * Focus will automatically jump to the modal's first element when mounted, and will return to the previous focused element when unmounted.
 
 ## Multiple modals (modals in modals)
