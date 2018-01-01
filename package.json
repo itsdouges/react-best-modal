@@ -19,7 +19,7 @@
     "version":
       "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
     "postversion": "git push && git push --tags",
-    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "codecov": "codecov"
   },
   "peerDependencies": {
     "react": ">=16.x.x",
@@ -47,7 +47,6 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
     "jest": "^22.0.4",
-    "nyc": "^11.4.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -72,6 +71,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "mapCoverage": true,
     "testRegex": "__tests__/.*\\.test\\.tsx$",
     "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "setupTestFrameworkScriptFile": "<rootDir>test/setup.js",
