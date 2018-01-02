@@ -33,21 +33,24 @@ const ContainerWithTransition = styled.div`
   opacity: ${(props: TransitionProps) => opacityMap[props.state] || 0};
 `;
 
-storiesOf('BestModal', module).add('transition', () => (
-  <Toggler>
-    {({ show, toggle }) => (
-      <Transition in={show} timeout={180} mountOnEnter unmountOnExit>
-        {(state: TransitionState) => (
-          <BestModal
-            onRequestClose={toggle}
-            appRoot={document.querySelector('#root') || document.body}
-          >
-            <ContainerWithTransition state={state}>
-              <button onClick={toggle}>close</button>
-            </ContainerWithTransition>
-          </BestModal>
-        )}
-      </Transition>
-    )}
-  </Toggler>
-));
+storiesOf('Transitions', module).add(
+  'supports react-transition-group no problem, heres a fadein/out',
+  () => (
+    <Toggler>
+      {({ show, toggle }) => (
+        <Transition in={show} timeout={180} mountOnEnter unmountOnExit>
+          {(state: TransitionState) => (
+            <BestModal
+              onRequestClose={toggle}
+              appRoot={document.querySelector('#root') || document.body}
+            >
+              <ContainerWithTransition state={state}>
+                <button onClick={toggle}>close</button>
+              </ContainerWithTransition>
+            </BestModal>
+          )}
+        </Transition>
+      )}
+    </Toggler>
+  )
+);
