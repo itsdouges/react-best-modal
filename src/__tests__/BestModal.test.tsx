@@ -123,7 +123,7 @@ describe('<BestModal />', () => {
     expect(appRoot.hasAttribute('aria-hidden')).toBe(false);
   });
 
-  it('should restore focus to previous element when unmounting', () => {
+  it('should restore focus to previous element when unmounting', done => {
     const previousElement = document.createElement('button');
     previousElement.focus();
     const appRoot = document.createElement('div');
@@ -136,7 +136,10 @@ describe('<BestModal />', () => {
 
     wrapper.unmount();
 
-    expect(document.activeElement).toBe(previousElement);
+    setTimeout(() => {
+      expect(document.activeElement).toBe(previousElement);
+      done();
+    });
   });
 
   it('should focus on first focusable element when mounting', done => {

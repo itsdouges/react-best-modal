@@ -24,7 +24,10 @@ export default class BestModal extends React.Component<Props> {
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
     this.props.appRoot.removeAttribute('aria-hidden');
-    this.previousFocusedElement.focus();
+
+    // Something inside <FocusLock /> is setting activeElement.
+    // This overrides that behaviour.
+    setTimeout(() => this.previousFocusedElement.focus(), 0);
   }
 
   onKeyDown = (e: KeyboardEvent) => {
@@ -38,7 +41,7 @@ export default class BestModal extends React.Component<Props> {
 
     return (
       <Portal>
-        <FocusLock>
+        <FocusLock returnFocus={false}>
           <div aria-modal="true" role="dialog" {...props}>
             {this.props.children}
           </div>
