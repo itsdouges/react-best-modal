@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.0.1][] - 2018-01-02
+
 ### Bugfix
 
 * Adds `types` property to `package.json`
@@ -27,3 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [0.1.1]: https://github.com/madou/react-simple-modal/tree/v0.1.1
 [unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/madou/react-simple-modal/tree/v1.0.0
+
+
+[Unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/madou/react-simple-modal/tree/v1.0.1
