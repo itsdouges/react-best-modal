@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Simple is best. Accessible out of the box, tiny api, bring your own styles. ",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "dist/esnext/index.tsx",
   "author": "madou",
   "license": "MIT",
