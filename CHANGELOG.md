@@ -31,13 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 * Initial release
 
-[unreleased]: https://github.com/madou/react-simple-modal/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/madou/react-simple-modal/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/madou/react-simple-modal/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/madou/react-simple-modal/compare/v0.1.1...v1.0.0
 [0.1.1]: https://github.com/madou/react-simple-modal/tree/v0.1.1
-[unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/madou/react-simple-modal/tree/v1.0.0
-[unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.1...HEAD
-[1.0.1]: https://github.com/madou/react-simple-modal/tree/v1.0.1
-
-
-[Unreleased]: https://github.com/madou/react-simple-modal/compare/v1.0.2...HEAD
-[1.0.2]: https://github.com/madou/react-simple-modal/tree/v1.0.2
