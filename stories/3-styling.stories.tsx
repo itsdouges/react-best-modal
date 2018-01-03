@@ -27,12 +27,6 @@ const LightBox = styled.div`
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
-const InnerContent = styled.div`
-  margin: 100px 0;
-  text-align: center;
-  height: 1000px;
-`;
-
 const App = styled.div`
   background: #2986be;
   background-image: url(//p6.zdassets.com/hc/theme_assets/138842/200037786//pattern_transparent.png),
@@ -99,10 +93,7 @@ storiesOf('Styling', module)
               <LightBox onClick={toggle} />
 
               <FixedContainer>
-                <InnerContent>
-                  <button onClick={toggle}>close modal</button>
-                  scroll down
-                </InnerContent>
+                <button onClick={toggle}>close modal</button>
               </FixedContainer>
             </BestModal>
           )
