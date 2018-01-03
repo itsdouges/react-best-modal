@@ -34,17 +34,17 @@ const App = ({ showModal, closeModal }) => (
 render(<App />, appRoot);
 ```
 
-**NOTE**: It is _required_ that you have an element inside your modal that is focusable. Essentially, any input or button.
+**NOTE**: Make sure you have an element inside your modal that is focusable. Essentially, any input, button, or element with `tabIndex="0"`. This is to ensure focus is set correctly inside the modal - while this isn't enforced, it's strongly advised.
 
 ## Styling
 
-It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-best-modal/?selectedKind=BestModal&selectedStory=disable%20body%20scroll&)
+It's up to you to style and position your modal. Want to disable scrolling content behind your modal? You have to do it yourself. [There's an example implementation here.](https://madou.github.io/react-best-modal/?selectedKind=Styling&selectedStory=and%20finally%20also%20disabling%20body%20from%20scrolling%20behind)
 
 ### Transitions
 
 `react-best-modal` works perfectly with [`ReactTransitionGroup`](https://reactcommunity.org/react-transition-group/).
 
-## Even. More. Accessible.
+## Accessibility
 
 If you're driving home for the ultimate accessible modal, make sure to use `aria-labelledby` and `aria-describedby`, for title and description of the modal, like so:
 
@@ -55,10 +55,16 @@ If you're driving home for the ultimate accessible modal, make sure to use `aria
   aria-labelledby="modal-title"
   aria-describedby="modal-description"
 >
+  <button onClick={closeModal}>close</button>
   <h2 id="modal-title">Hello, World!</h2>
   <p id="modal-description">This is a modal, hello worlding!</p>
 </BestModal>
 ```
+
+### Pro tips
+
+* Have an element that is focusable (for example there is a button above).
+* Make sure to embrace `aria-labelledby` and `aria-describedby`.
 
 ## Focus
 

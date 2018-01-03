@@ -19,7 +19,7 @@ storiesOf('Behaviour', module)
       }
     </Toggler>
   ))
-  .add('locks focus within modal', () => (
+  .add('locks focus within modal (ensure you have something focusable inside the modal!)', () => (
     <Toggler>
       {({ show, toggle }) =>
         show && (
