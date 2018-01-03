@@ -1,6 +1,6 @@
 {
   "name": "react-best-modal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple is best. Accessible out of the box, tiny api, bring your own styles. ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,14 @@
   "author": "madou",
   "license": "MIT",
   "homepage": "https://github.com/madou/react-best-modal#readme",
-  "keywords": ["react", "modal", "dialog", "modal-dialog", "simple", "lightweight"],
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "modal-dialog",
+    "simple",
+    "lightweight"
+  ],
   "scripts": {
     "tdd": "jest --watch",
     "test": "jest --coverage",
@@ -17,8 +24,7 @@
     "build": "rm -rf dist && tsc && tsc -p ./tsconfig.next.json",
     "prepublish": "yarn build",
     "preversion": "yarn test",
-    "version":
-      "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md",
     "postversion": "git push && git push --tags",
     "codecov": "codecov"
   },
@@ -74,7 +80,14 @@
     },
     "mapCoverage": true,
     "testRegex": "__tests__/.*\\.test\\.tsx$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>test/setup.js",
     "globals": {
       "ts-jest": {
