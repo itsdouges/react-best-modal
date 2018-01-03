@@ -5,7 +5,7 @@
 [![Build Status](http://img.shields.io/travis/madou/react-best-modal/master.svg?style=flat-square)](https://travis-ci.org/madou/react-best-modal)
 [![codecov](https://codecov.io/gh/madou/react-best-modal/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/react-best-modal)
 
-Simple is best. Accessible out of the box, tiny api, bring your own styles. **React 16+ only.**
+Simple is best. Accessible out of the box, tiny api, bring your own styles. Don't let libraries you use get in the way of what you want, build up, not down. **React 16+ only.**
 
 ## Usage
 
