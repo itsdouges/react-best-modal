@@ -5,7 +5,7 @@ import BestModal from '../src';
 import Toggler from './Toggler';
 import BodyClassName from './BodyClassName';
 
-const FixedContainer = styled.div`
+const FixedBestModal = styled(BestModal)`
   position: fixed;
   top: 25%;
   right: 25%;
@@ -49,14 +49,13 @@ storiesOf('Styling', module)
     <Toggler>
       {({ show, toggle }) =>
         show && (
-          <BestModal
+          <FixedBestModal
             appRoot={document.getElementById('root') as HTMLElement}
             onRequestClose={toggle}
           >
-            <FixedContainer>
-              <button onClick={toggle}>close modal</button>
-            </FixedContainer>
-          </BestModal>
+            <button onClick={toggle}>close modal</button>
+            <input />
+          </FixedBestModal>
         )
       }
     </Toggler>
@@ -65,15 +64,16 @@ storiesOf('Styling', module)
     <Toggler>
       {({ show, toggle }) =>
         show && (
-          <BestModal
-            appRoot={document.getElementById('root') as HTMLElement}
-            onRequestClose={toggle}
-          >
+          <>
             <LightBox onClick={toggle} />
-            <FixedContainer>
+            <FixedBestModal
+              appRoot={document.getElementById('root') as HTMLElement}
+              onRequestClose={toggle}
+            >
               <button onClick={toggle}>close modal</button>
-            </FixedContainer>
-          </BestModal>
+              <input />
+            </FixedBestModal>
+          </>
         )
       }
     </Toggler>
@@ -83,19 +83,19 @@ storiesOf('Styling', module)
       <Toggler>
         {({ show, toggle }) =>
           show && (
-            <BestModal
-              appRoot={document.getElementById('root') as HTMLElement}
-              onRequestClose={toggle}
-              aria-labelledby="modal-title"
-              aria-describedby="modal-description"
-            >
+            <>
               <DisableBodyScroll />
               <LightBox onClick={toggle} />
-
-              <FixedContainer>
+              <FixedBestModal
+                appRoot={document.getElementById('root') as HTMLElement}
+                onRequestClose={toggle}
+                aria-labelledby="modal-title"
+                aria-describedby="modal-description"
+              >
                 <button onClick={toggle}>close modal</button>
-              </FixedContainer>
-            </BestModal>
+                <input />
+              </FixedBestModal>
+            </>
           )
         }
       </Toggler>

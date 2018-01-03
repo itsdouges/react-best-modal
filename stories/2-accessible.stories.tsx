@@ -16,6 +16,7 @@ storiesOf('BEST Accessibility', module).add('make sure to use title and descript
           <button onClick={toggle}>close modal</button>
           <h2 id="modal-title">Hello, World!</h2>
           <p id="modal-description">This is a modal, hello worlding!</p>
+          <input />
         </BestModal>
       )
     }

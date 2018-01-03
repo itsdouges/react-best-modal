@@ -13,6 +13,7 @@ storiesOf('Behaviour', module)
             onRequestClose={toggle}
           >
             <button onClick={toggle}>close modal</button>
+            <input />
           </BestModal>
         )
       }

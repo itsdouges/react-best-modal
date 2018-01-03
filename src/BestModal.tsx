@@ -41,11 +41,9 @@ export default class BestModal extends React.Component<Props> {
 
     return (
       <Portal>
-        <FocusLock returnFocus={false}>
-          <div aria-modal="true" role="dialog" {...props}>
-            {this.props.children}
-          </div>
-        </FocusLock>
+        <div aria-modal="true" role="dialog" {...props}>
+          <FocusLock>{this.props.children}</FocusLock>
+        </div>
       </Portal>
     );
   }

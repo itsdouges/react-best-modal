@@ -18,7 +18,7 @@ const opacityMap = {
   exited: 0,
 };
 
-const ContainerWithTransition = styled.div`
+const FixedBestModalWithTransition = styled(BestModal)`
   position: fixed;
   top: 25%;
   right: 25%;
@@ -40,14 +40,14 @@ storiesOf('Transitions', module).add(
       {({ show, toggle }) => (
         <Transition in={show} timeout={180} mountOnEnter unmountOnExit>
           {(state: TransitionState) => (
-            <BestModal
+            <FixedBestModalWithTransition
+              state={state}
               onRequestClose={toggle}
               appRoot={document.querySelector('#root') || document.body}
             >
-              <ContainerWithTransition state={state}>
-                <button onClick={toggle}>close</button>
-              </ContainerWithTransition>
-            </BestModal>
+              <button onClick={toggle}>close</button>
+              <input />
+            </FixedBestModalWithTransition>
           )}
         </Transition>
       )}

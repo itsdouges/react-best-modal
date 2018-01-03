@@ -5664,8 +5664,8 @@ react-dom@^16.2.0:
     prop-types "^15.6.0"
 
 react-focus-lock@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.6.1.tgz#d8b368742abbfc3bcdc58cd1cc6f787f6afe85a0"
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.6.3.tgz#b66b7df1720edadaa6ad8df5b575b26918bf5c2e"
   dependencies:
     focus-lock "^0.1.0"
     prop-types "15.5.10"
