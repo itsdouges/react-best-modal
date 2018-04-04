@@ -156,4 +156,15 @@ describe('<BestModal />', () => {
       done();
     });
   });
+
+  it('should disable lock', () => {
+    const appRoot = document.createElement('div');
+    const wrapper = shallow(
+      <BestModal appRoot={appRoot} onRequestClose={noop} disableFocusLock>
+        hello world
+      </BestModal>
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

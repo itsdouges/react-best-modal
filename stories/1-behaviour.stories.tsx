@@ -27,11 +27,20 @@ storiesOf('Behaviour', module)
             appRoot={document.getElementById('root') as HTMLElement}
             onRequestClose={toggle}
           >
+            <input placeholder="put text in me" />
             <button onClick={toggle}>close modal</button>
-            <input />
-            <input />
-            <input />
-            <button>submit</button>
+            <a tabIndex={0} href="">
+              result
+            </a>
+            <a tabIndex={0} href="">
+              result
+            </a>
+            <a tabIndex={0} href="">
+              result
+            </a>
+            <a tabIndex={0} href="">
+              result
+            </a>
           </BestModal>
         )
       }

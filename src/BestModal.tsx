@@ -6,6 +6,7 @@ export interface Props extends React.AllHTMLAttributes<any> {
   children: React.ReactNode;
   onRequestClose: (e: KeyboardEvent) => void;
   appRoot: Element;
+  disableFocusLock?: boolean;
   // Allow through any properties that weren't picked up
   [x: string]: any;
 }
@@ -37,12 +38,12 @@ export default class BestModal extends React.Component<Props> {
   };
 
   render() {
-    const { children, onRequestClose, appRoot, ...props } = this.props;
+    const { children, onRequestClose, appRoot, disableFocusLock, ...props } = this.props;
 
     return (
       <Portal>
         <div aria-modal="true" role="dialog" {...props}>
-          <FocusLock>{this.props.children}</FocusLock>
+          <FocusLock autoFocus={!disableFocusLock}>{children}</FocusLock>
         </div>
       </Portal>
     );

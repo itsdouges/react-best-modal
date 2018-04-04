@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+* Ability to turn off focus lock.
+
 ## [1.0.4][] - 2018-01-05
 
 ### Changed

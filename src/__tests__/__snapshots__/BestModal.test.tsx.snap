@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<BestModal /> should disable lock 1`] = `
+<Portal>
+  <div
+    aria-modal="true"
+    role="dialog"
+  >
+    <FocusLock
+      autoFocus={false}
+      disabled={false}
+      noFocusGuards={false}
+      persistentFocus={false}
+      returnFocus={false}
+    >
+      hello world
+    </FocusLock>
+  </div>
+</Portal>
+`;
+
 exports[`<BestModal /> should pass through all extra props 1`] = `
 <Portal>
   <div
@@ -10,11 +29,11 @@ exports[`<BestModal /> should pass through all extra props 1`] = `
     role="dialog"
   >
     <FocusLock
-      allowTextSelection={false}
+      autoFocus={true}
       disabled={false}
       noFocusGuards={false}
+      persistentFocus={false}
       returnFocus={false}
-      sandboxed={false}
     >
       hi
     </FocusLock>

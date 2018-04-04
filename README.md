@@ -85,11 +85,12 @@ import BestModal from 'react-best-modal';
 
 #### Props
 
-| prop           | type                       | required | description                                                                                     |
-| -------------- | -------------------------- | -------- | ----------------------------------------------------------------------------------------------- |
-| children       | ReactNode                  | yes      | Your modal markup.                                                                              |
-| onRequestClose | (e: KeyboardEvent) => void | yes      | Callback when the modal wants to close. Up to you to action it.                                 |
-| appRoot        | HTMLElement                | yes      | Root of your application. The modal will add and remove accessible attributes when appropriate. |
-| className      | string                     | no       |                                                                                                 |
+| prop             | type                       | required | description                                                                                     |
+| ---------------- | -------------------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| children         | ReactNode                  | yes      | Your modal markup.                                                                              |
+| onRequestClose   | (e: KeyboardEvent) => void | yes      | Callback when the modal wants to close. Up to you to action it.                                 |
+| appRoot          | HTMLElement                | yes      | Root of your application. The modal will add and remove accessible attributes when appropriate. |
+| className        | string                     | no       |                                                                                                 |
+| disableFocusLock | boolean                    | no       | Disables focus lock. Useful if something else wants to trap focus.                              |
 
 All other props that are valid on a `HTMLElement` are passed through.
