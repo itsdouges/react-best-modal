@@ -2,7 +2,7 @@ import * as React from 'react';
 import Portal from './Portal';
 import FocusLock from 'react-focus-lock';
 
-export interface Props extends React.AllHTMLAttributes<any> {
+export interface Props {
   children: React.ReactNode;
   onRequestClose: (e: KeyboardEvent) => void;
   appRoot: Element;
@@ -26,9 +26,15 @@ export default class BestModal extends React.Component<Props> {
     document.removeEventListener('keydown', this.onKeyDown);
     this.props.appRoot.removeAttribute('aria-hidden');
 
-    // Something inside <FocusLock /> is setting activeElement.
-    // This overrides that behaviour.
-    setTimeout(() => this.previousFocusedElement.focus(), 0);
+    if (this.previousFocusedElement) {
+      // Something inside <FocusLock /> is setting activeElement.
+      // This overrides that behaviour.
+      setTimeout(() => {
+        if (this.previousFocusedElement) {
+          this.previousFocusedElement.focus();
+        }
+      }, 0);
+    }
   }
 
   onKeyDown = (e: KeyboardEvent) => {
@@ -43,7 +49,7 @@ export default class BestModal extends React.Component<Props> {
     return (
       <Portal>
         <div aria-modal="true" role="dialog" {...props}>
-          <FocusLock autoFocus={!disableFocusLock}>{children}</FocusLock>
+          <FocusLock disabled={disableFocusLock}>{children}</FocusLock>
         </div>
       </Portal>
     );

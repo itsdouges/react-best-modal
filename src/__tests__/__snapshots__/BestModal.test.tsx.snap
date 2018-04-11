@@ -7,8 +7,8 @@ exports[`<BestModal /> should disable lock 1`] = `
     role="dialog"
   >
     <FocusLock
-      autoFocus={false}
-      disabled={false}
+      autoFocus={true}
+      disabled={true}
       noFocusGuards={false}
       persistentFocus={false}
       returnFocus={false}
