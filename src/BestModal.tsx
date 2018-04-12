@@ -7,8 +7,6 @@ export interface Props {
   onRequestClose: (e: KeyboardEvent) => void;
   appRoot: Element;
   disableFocusLock?: boolean;
-  // Allow through any properties that weren't picked up
-  [x: string]: any;
 }
 
 const ESC_KEY = 27;

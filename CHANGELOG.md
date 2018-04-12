@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Removed
+
+* Extra props map.
+
 ## [1.1.1][] - 2018-04-11
 
 ### Fixed
